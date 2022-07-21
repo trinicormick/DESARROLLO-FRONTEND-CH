@@ -135,62 +135,30 @@ footer h1 {
     width: 100%;
 }
 /* Hoja de estilos de servicios.html*/
-.mainServicios {
-    background-color: #2c2c2c;
-    display: flex;
-    
-}
-.mainServicios h1 {
-    font-size: 50px;
-    color:rgb(239, 153, 14);
-    margin-left: 100px;
-}
-.spanServicios {
-    display: flex;
-    display: grid;
-    grid-template-columns:2fr 2fr 2fr;
-    grid-template-rows:2fr 2fr;
-    grid-template-areas: "tituloServicios tituloDosServicios tituloTresServicios"
-                          "parrafoServicios parrafoDosServicios parrafoTresServicios";
-    
-}
-div h2 .tituloServicios {
-    color: rgb(239, 153, 14);
-    font-size: 40px;
-    grid-area: tituloServicios;
-}
-div h2 .tituloDosServicios {
-    color: rgb(239, 153, 14);
-    font-size: 40px;
-    grid-area: tituloDosServicios;
-}
-div h3 .tituloTresServicios {
-    color: rgb(239, 153, 14);
-    font-size: 40px;
-    grid-area: tituloTresServicios;
-}
-div p .parrafoServicios {
-    color: #2c2c2c;
-    font-size: 100px;
-    grid-area: parrafoServicios;
-}
-div p .parrafoDosServicios {
-    color:aqua;
-    font-size: 30px;
-    grid-area: parrafoDosServicios;
-}
-div p .parrafoTresServicios {
-    color: #2c2c2c;
-    font-size: 30px;
-    grid-area: parrafoTresServicios;
-}
 
+
+
+.textoServicios {
+    font-size: 1.2rem;
+    background-color: #2c2c2c;
+    color:rgb(239, 153, 14);
+    margin-top: 0.8rem;
+    border-radius: 1rem;
+    align-content: center;
+}
+.textoServiciosDos {
+    font-size: 1.3rem;
+    color: #2c2c2c;
+    background:rgb(239, 153, 14) ;
+    border-radius: 1.2rem;
+}
 footer h3 {
     color:rgb(239, 153, 14);
     display: flex;
     justify-content: center;
     
 }
+
 
 /* Hoja de estilos de proyectos.html*/
 .mainProyectos {

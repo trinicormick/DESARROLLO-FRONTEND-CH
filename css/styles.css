@@ -37,9 +37,24 @@ main {
     justify-content: center;
 }
 .tituloIndex {
+    animation-name: tituloIndex;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    
     color: #2c2c2c;
 }
+
+@keyframes tituloIndex {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.8);
+    }
+} 
 .tituloIndex:hover {
+    
     color: rgb(239, 153, 14);
 }
 
@@ -62,6 +77,22 @@ span .divIndexDos {
     font-size: 60px;
     color: #2c2c2c;
     padding-top: 100px;
+    animation-name: divIndexDos;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+@keyframes divIndexDos {
+    from {
+        color: white;
+        transform: scale(0.5);
+    }
+    to {
+        color:#2c2c2c;
+        transform: scale(1);
+        
+    }
+    
 }
 span .divIndexTres {
     grid-area: tres;

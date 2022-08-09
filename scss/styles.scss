@@ -9,6 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    
  }
  header {
     display: flex;
@@ -416,38 +417,101 @@ footer h3 {
         }
         
         .tituloIndex {
-            font-size:0.5rem;
+            font-size:0.8rem;
             animation-name: tituloIndex;
             animation-iteration-count: infinite;
-            animation-duration: 5s;
+            animation-duration: 3s;
             animation-timing-function: linear;
         }   
         @keyframes tituloIndex {
             from {
-                transform: scale(0.7);
+                transform: scale(0.8);
             }
             to {
-                transform: scale(0.9);
+                transform: scale(1);
             } 
     }
     span {
         height: 85vh;
+        background-image:url(/img/fotocasa.jpg);
+        width:auto;
         
     }  
     span .divIndexUno img{
-        height: 40%;
-        width: 50%;
+        display: none;
     }  
     span .divIndexDos {
         font-size:1rem;
+        display: none;
     }
     span .divIndexTres {
-        font-size: 0.5rem;
+        display: none;
     }
     footer h2 {
-        font-size: 1rem;
+        font-size:$fuente-mobile;
     }
-    
+    /*mediaq de contacto.html*/
+    .imagenContacto {
+        width: 3rem;
+        height: 4rem;
+     }
+     .tituloFormulario {
+        font-size:$fuente-mobile;
+     }
+     .nombreFormulario {
+        font-size:$fuente-mobile;
+     }
+     .emailFormulario {
+        font-size:$fuente-mobile;
+     }
+     .botonEnviar {
+        font-size: 0.6rem;
+     }
+     .botonBorrar {
+        font-size: 0.6rem;
+     }
+     .spanContacto{
+        height:80vh;
+        width: 50vh;
+     }
+     .imagenDosContacto {
+        width:70%;
+        height:100%;
+     }
+     .footerContacto {
+        font-size:$fuente-mobile;
+     }
+     /*mediaq de nosotros.html*/
+     .imgNosotros {
+        width: 3rem;
+        height: 4rem;
+    }
+    .contenedorNosotros {
+        background-color: rgb(239, 153, 14);;
+     }
+     div .textoNosotros {
+        font-size: 0.8rem;
+     }
+     div .textoNosotrosDos {
+        font-size: 0.8rem;
+    }
+    footer h1 {
+        font-size:$fuente-mobile;
+    }
+    /*mediaq de servicios.html*/
+    .logoServicios {
+        width: 3rem;
+        height: 4rem;
+    }
+    .tituloServicios {
+        font-size: 0.9rem;
+    }
+    .tituloDosServicios {
+        font-size:$fuente-mobile;
+    }
+    .parrafoServicios {
+        font-size:$fuente-mobile;
+    }
     
     }
     

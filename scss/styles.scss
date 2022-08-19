@@ -340,14 +340,12 @@ footer h3 {
         height: 8rem;
     }
     .imagenDosContacto { 
-        width: 30rem;
-        height: 20rem;
+        width: 20%;
+        height: 30%;
+        padding-right: 2rem;
 
      }
-    .spanContacto {
-        width: 50rem;
-        height: 25rem;
-    }
+    
     footer h1 {
         font-size: 1.3rem;
     }
@@ -451,25 +449,27 @@ footer h3 {
     .imgNosotros {
         width: 5.3rem;
     }
-    div .textoNosotros {
-        font-size: 1rem;
-        width: 35rem;
-        height: 10rem;
-    }
-    div .imgMain {
-        width: 20rem;
-        height: 7rem;
+    .mainNosotros {
+        flex-direction: column;
+        .imgMain {
+            width: 20rem;
+            height: 7rem;
+            .imagenPlano {
+                width: 100%;
+                height: 250%;
+            }
+        }
+        .textoNosotros {
+            font-size: 1rem;
+            width: 35rem;
+            height: 10rem;
+        }
+        .textoNosotrosDos {
+            font-size: 1rem;
+            width: 14rem;
+            height: 7rem;
+        }
 
-    }
-    .imagenPlano {
-        width: 100%;
-        height: 250%;
-    }
-    div .textoNosotrosDos {
-        font-size: 1rem;
-        width: 15rem;
-        height: 7rem;
-    }
     }
     /*mediaq celular horizontal*/
     @media screen and (max-width:320px) {
@@ -536,15 +536,12 @@ footer h3 {
      .botonBorrar {
         font-size: 0.6rem;
      }
-     .spanContacto{
-        height:80vh;
-        width: 50vh;
-     }
+     
      .imagenDosContacto {
-        width:120%;
+        width:140%;
         height:90%;
-        margin-right: 2rem;
-        margin-left:0.5rem;
+        border-radius: none;
+        margin-left: 0%;
      }
      .footerContacto {
         font-size:$fuente-mobile;
@@ -559,24 +556,23 @@ footer h3 {
         display: grid;
         grid-template-areas: "imgMain"
                              "textoNosotrosDos";
-    }
-    div .imgMain {
-        margin-top: 0%;
-        grid-area: imgMain;
-        
-    }
-    .imagenPlano {
-        width: 90%;
-        height: 300%;
-        border-radius: 0%;
-        margin-left: 0.5rem;
-    }
-     div .textoNosotros {
-        display: none;
-     }
-     div .textoNosotrosDos {
-        font-size: 0.8rem;
-        grid-area: textoNosotrosDos;
+        .imgMain {
+            margin-top: 0%;
+            grid-area: imgMain;
+            .imagenPlano {
+                width: 70%;
+                height: 300%;
+                border-radius: 1%;
+                padding-left: 4rem;
+                }
+            }    
+        .textoNosotros {
+                display: none;
+        }   
+        .textoNosotrosDos {
+            font-size: 0.8rem;
+            grid-area: textoNosotrosDos;
+        }                  
     }
     footer h1 {
         font-size:$fuente-mobile;
@@ -624,58 +620,45 @@ footer h3 {
                              "cinco";
         grid-template-columns:1fr;
         grid-template-rows:1fr;
-        
+        .divUnoProyectos {
+            grid-area: uno;
+            align-items: center;
+        }
+        .divDosProyectos {
+            align-items: center;
+            grid-area: dos;
+            margin-left: 4rem;
+        }
+        .divTresProyectos {
+            grid-area: tres;
+            align-items: center;
+            margin-left: 4rem;
+            
+        }
+        .divCuatroProyectos {
+            grid-area: cuatro;
+            align-items: center;
+            width: 15rem;
+            padding-left: 25%;
+            height: 10rem;
+            .divCuatroProyectos img {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+        .divCincoProyectos {
+            align-items: center;
+            grid-area: cinco;
+            width: 70%;
+        }
+        .divSeisProyectos {
+            align-items: center;
+            grid-area: seis;
+        }
     }
-    .divUnoProyectos {
-        grid-area: uno;
-        align-items: center;
-    }
-    
-    .divDosProyectos {
-        align-items: center;
-        grid-area: dos;
-        margin-left: 4rem;
-    }
-    .divCuatroProyectos {
-        grid-area: cuatro;
-        align-items: center;
-        width: 15rem;
-        padding-left: 25%;
-        height: 10rem;
-    }
-    .divCuatroProyectos img {
-        width: 1rem;
-        height: 1rem;
-       
-        
-        
-
-    }
-    .divTresProyectos {
-        grid-area: tres;
-        align-items: center;
-        margin-left: 4rem;
-        
-    }
-    .divCincoProyectos {
-        align-items: center;
-        grid-area: cinco;
-    }
-    
     .parrafoProyectos {
         font-size: 0.4rem;
     }
     
-    .divSeisProyectos {
-        align-items: center;
-        grid-area: seis;
     }
-    
-
-    
-    }
-    
-    
-    
-    
-    
+}

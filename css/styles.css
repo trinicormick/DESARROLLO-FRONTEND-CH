@@ -21,9 +21,6 @@ header div img {
   width: 80%;
   margin: 0; }
 
-.menu input[type="checkbox"] {
-  display: none; }
-
 .menu ul li {
   color: black;
   text-decoration: none;
@@ -42,6 +39,7 @@ main {
   display: flex;
   justify-content: center; }
 
+/*Hoja de estilo index.html*/
 .tituloIndex {
   animation-name: tituloIndex;
   animation-iteration-count: infinite;
@@ -69,19 +67,17 @@ span {
   grid-template-areas: "uno dos" "tres tres";
   grid-template-columns: 1.6fr 0.5fr;
   grid-template-rows: 2fr 0.5fr; }
-
-span .divIndexUno {
-  grid-area: uno; }
-
-span .divIndexDos {
-  grid-area: dos;
-  font-size: 60px;
-  color: #2c2c2c;
-  padding-top: 100px;
-  animation-name: divIndexDos;
-  animation-iteration-count: infinite;
-  animation-duration: 5s;
-  animation-timing-function: linear; }
+  span .divIndexUno {
+    grid-area: uno; }
+  span .divIndexDos {
+    grid-area: dos;
+    font-size: 60px;
+    color: #2c2c2c;
+    padding-top: 100px;
+    animation-name: divIndexDos;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear; }
 
 @keyframes divIndexDos {
   from {
@@ -90,75 +86,68 @@ span .divIndexDos {
   to {
     color: #2c2c2c;
     transform: scale(1); } }
-
-span .divIndexTres {
-  grid-area: tres;
-  font-size: 30px;
-  color: #2c2c2c;
-  padding: 30px; }
+  span .divIndexTres {
+    grid-area: tres;
+    font-size: 30px;
+    color: #2c2c2c;
+    padding: 30px; }
 
 footer {
   background-color: #2c2c2c; }
 
 /* Hoja de estilos de nosotros.html */
 .mainNosotros {
+  height: 110vh;
+  background-color: #ef990e;
   display: flex;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: "divUno divDos" "divTres divCuatro"; }
-
-.divUno {
-  background-color: #ef990e;
-  color: #2c2c2c;
-  grid-area: divUno; }
-
-.parrafoNosotros {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 100px;
-  font-size: 50px; }
-
-.divDos {
-  background-color: #ef990e;
-  grid-area: divDos; }
-
-.divTres {
-  background-color: #ef990e;
-  font-size: 30px;
-  color: #2c2c2c;
-  grid-area: divTres; }
-
-.divCuatro {
-  background-color: white; }
-
-.textoNosotros {
-  color: #ef990e;
-  font-size: 40px;
-  justify-content: center;
-  margin-left: 30px;
-  margin-top: 30px;
-  grid-area: divCuatro;
-  background-color: #2c2c2c;
-  border-radius: 2rem;
-  font-size: 1.6rem;
-  text-align: center;
-  margin-top: 1rem;
-  padding-top: 1.5rem;
-  margin-block-end: 1rem; }
-
-.textoNosotrosDos {
-  font-size: 1.3rem;
-  background-color: #ef990e;
-  color: #2c2c2c;
-  border-radius: 10rem; }
+  grid-template-areas: "textoNosotros textoNosotros" "imgMain textoNosotrosDos"; }
+  .mainNosotros .imgMain {
+    grid-area: imgMain;
+    width: 10%;
+    height: 10%; }
+    .mainNosotros .imgMain .imagenPlano {
+      border-radius: 8rem; }
+  .mainNosotros .textoNosotros {
+    width: 75rem;
+    height: 10rem;
+    grid-area: textoNosotros;
+    color: #ef990e;
+    background-color: #2c2c2c;
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 0.9rem;
+    padding-top: 1.5rem;
+    margin-block-end: 1rem; }
+  .mainNosotros .textoNosotrosDos {
+    width: 35rem;
+    height: 7rem;
+    font-size: 1.3rem;
+    border-radius: 2rem;
+    background-color: #2c2c2c;
+    color: #ef990e;
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-top: 8rem;
+    margin-left: 2rem;
+    grid-area: textoNosotrosDos; }
 
 /* Hoja de estilos de contacto.html*/
 .tituloFormulario {
   color: #ef990e; }
 
-.spanContacto img {
-  width: 100%; }
+.spanContacto {
+  justify-content: center; }
+  .spanContacto .imagenDosContacto {
+    width: 120%;
+    height: 100%;
+    border-radius: 3rem;
+    margin-left: 3rem;
+    margin-top: 3rem; }
 
 /* Hoja de estilos de servicios.html*/
 .tituloServicios {
@@ -181,12 +170,20 @@ footer {
     border-radius: 1rem;
     background-color: #2c2c2c; } }
 
+.mainServicios {
+  justify-content: space-between;
+  background-color: #ef990e;
+  width: 200%; }
+
+.sectionServicios {
+  background-color: #ef990e; }
+
 .textoServicios {
   font-size: 1.2rem;
   background-color: #2c2c2c; }
 
 .tituloDosServicios {
-  color: #ef990e;
+  color: #2c2c2c;
   margin-top: 0.8rem;
   border-radius: 1rem;
   align-content: center;
@@ -209,34 +206,28 @@ footer {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "divUnoProyectos divDosProyectos" " divTresProyectos divCuatroProyectos" "divCincoProyectos divSeisProyectos"; }
-
-.divUnoProyectos {
-  padding-left: 5rem;
-  padding-top: 2rem;
-  width: 150%;
-  height: 300%;
-  grid-area: divUnoProyectos; }
-
-.divDosProyectos {
-  grid-area: divDosProyectos; }
-
-.divTresProyectos {
-  grid-area: divTresProyectos; }
-
-.divCuatroProyectos {
-  padding-left: 10rem;
-  width: 90%;
-  height: 90%;
-  grid-area: divCuatroProyectos; }
-
-.divCincoProyectos {
-  padding-left: 5rem;
-  width: 90%;
-  height: 90%;
-  grid-area: divCincoProyectos; }
-
-.divSeisProyectos {
-  grid-area: divSeisProyectos; }
+  .mainProyectos .divUnoProyectos {
+    padding-left: 5rem;
+    padding-top: 2rem;
+    width: 150%;
+    height: 300%;
+    grid-area: divUnoProyectos; }
+  .mainProyectos .divDosProyectos {
+    grid-area: divDosProyectos; }
+  .mainProyectos .divTresProyectos {
+    grid-area: divTresProyectos; }
+  .mainProyectos .divCuatroProyectos {
+    padding-left: 10rem;
+    width: 90%;
+    height: 90%;
+    grid-area: divCuatroProyectos; }
+  .mainProyectos .divCincoProyectos {
+    padding-left: 5rem;
+    width: 90%;
+    height: 90%;
+    grid-area: divCincoProyectos; }
+  .mainProyectos .divSeisProyectos {
+    grid-area: divSeisProyectos; }
 
 .parrafoProyectos {
   text-align: center;
@@ -248,12 +239,12 @@ footer {
 
 /*media-queries*/
 /*mediaq tablet*/
-/*mediaq index.html*/
 @media screen and (max-width: 600px) {
   header div img {
     width: 5.3rem; }
   .menu ul li {
     font-size: 0.8rem; }
+  /*mediaq de index. html*/
   .tituloIndex {
     font-size: 1rem;
     animation-name: tituloIndex;
@@ -280,6 +271,9 @@ footer {
   .imagenContacto {
     width: 6rem;
     height: 8rem; }
+  .imagenDosContacto {
+    width: 30rem;
+    height: 20rem; }
   .spanContacto {
     width: 50rem;
     height: 25rem; }
@@ -290,9 +284,44 @@ footer {
     width: 5.3rem; }
   .mainProyectos {
     height: 10vh; }
+  .divUnoProyectos img {
+    width: 40%;
+    height: 30%;
+    margin-right: 0%; }
+  .divDosProyectos {
+    margin-right: 4rem;
+    width: 15rem; }
+  .divCuatroProyectos {
+    margin-top: 2rem; }
+  .divCuatroProyectos img {
+    width: 40%;
+    height: 30%;
+    margin-left: 0%;
+    margin-right: 20rem;
+    padding-top: 2rem;
+    padding-right: 5rem;
+    padding-left: 0%; }
+  .divTresProyectos {
+    width: 15rem;
+    margin-left: 2rem;
+    margin-top: 0%; }
+  .divCincoProyectos {
+    width: 15rem;
+    margin-left: 0%;
+    margin-right: 2rem;
+    margin-top: 2rem; }
+  .divCincoProyectos img {
+    width: 120%;
+    height: 110%;
+    margin-right: 2rem; }
+  .parrafoProyectos {
+    font-size: 0.8rem; }
   .divCuatroProyectos {
     width: 100%;
     height: 100%; }
+  .divSeisProyectos {
+    margin-left: 4rem;
+    width: 15rem; }
   /*mediaq servicios.html*/
   .spanServicios {
     height: 100vh; }
@@ -321,16 +350,29 @@ footer {
   .imgNosotros {
     width: 5.3rem; }
   div .textoNosotros {
-    font-size: 1rem; }
+    font-size: 1rem;
+    width: 35rem;
+    height: 10rem; }
+  div .imgMain {
+    width: 20rem;
+    height: 7rem; }
+  .imagenPlano {
+    width: 100%;
+    height: 250%; }
   div .textoNosotrosDos {
-    font-size: 1rem; } }
+    font-size: 1rem;
+    width: 15rem;
+    height: 7rem; } }
 
 /*mediaq celular horizontal*/
 @media screen and (max-width: 320px) {
+  header {
+    flex-direction: column; }
   header div img {
     width: 3.5rem; }
   .menu ul li {
-    font-size: 0.3rem; }
+    font-size: 0.4rem; }
+  /*mediaq de index.html*/
   .tituloIndex {
     font-size: 0.8rem;
     animation-name: tituloIndex;
@@ -343,11 +385,10 @@ footer {
     to {
       transform: scale(1); } }
   span {
-    height: 85vh;
-    background-image: url(/img/fotocasa.jpg);
-    width: auto; }
+    height: 85vh; }
   span .divIndexUno img {
-    display: none; }
+    height: 125%;
+    width: 132%; }
   span .divIndexDos {
     font-size: 1rem;
     display: none; }
@@ -357,8 +398,8 @@ footer {
     font-size: 0.7rem; }
   /*mediaq de contacto.html*/
   .imagenContacto {
-    width: 3rem;
-    height: 4rem; }
+    width: 20%;
+    height: 20%; }
   .tituloFormulario {
     font-size: 0.7rem; }
   .nombreFormulario {
@@ -373,62 +414,90 @@ footer {
     height: 80vh;
     width: 50vh; }
   .imagenDosContacto {
-    width: 70%;
-    height: 100%; }
+    width: 120%;
+    height: 90%;
+    margin-right: 2rem;
+    margin-left: 0.5rem; }
   .footerContacto {
     font-size: 0.7rem; }
   /*mediaq de nosotros.html*/
   .imgNosotros {
-    width: 3rem;
-    height: 4rem; }
-  .contenedorNosotros {
-    background-color: #ef990e; }
+    width: 3.5rem; }
+  .mainNosotros {
+    height: 90vh;
+    flex-direction: column;
+    display: grid;
+    grid-template-areas: "imgMain" "textoNosotrosDos"; }
+  div .imgMain {
+    margin-top: 0%;
+    grid-area: imgMain; }
+  .imagenPlano {
+    width: 90%;
+    height: 300%;
+    border-radius: 0%;
+    margin-left: 0.5rem; }
   div .textoNosotros {
-    font-size: 0.8rem; }
+    display: none; }
   div .textoNosotrosDos {
-    font-size: 0.8rem; }
+    font-size: 0.8rem;
+    grid-area: textoNosotrosDos; }
   footer h1 {
     font-size: 0.7rem; }
   /*mediaq de servicios.html*/
   .logoServicios {
-    width: 3rem;
-    height: 4rem; }
+    width: 3.5rem; }
+  .sectionServicios {
+    background-color: #ef990e; }
+  .columnMobile {
+    flex-direction: column;
+    background-color: #ef990e;
+    width: 19.5rem; }
   .tituloServicios {
     font-size: 0.9rem; }
   .tituloDosServicios {
-    font-size: 0.7rem; }
+    width: 10rem;
+    height: 8rem;
+    font-size: 0.8rem;
+    color: #ef990e;
+    background-color: #2c2c2c;
+    margin-left: 6rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding-top: 2rem; }
   .parrafoServicios {
-    font-size: 0.7rem; } }
-
-/*mediaq de Nosotros.html
-    
-    .contenedor {
-        display: flex;
-        display: grid;
-    grid-template-areas: "header header"
-                         "divUno divDos"
-                         "divTres divCuatro"
-                         "footer footer";
-    grid-template-columns:2fr 2fr;
-    grid-template-rows:1fr;
-    }
-    header {
-        grid-area: header;
-    }
-    .divUno {
-        grid-area: divUno;
-    }
-    .divDos {
-        grid-area: divDos;
-    }
-    .divTres {
-        grid-area: divTres;
-    }
-    .divCuatro {
-        grid-area: divCuatro;
-    }
-    footer {
-        grid-area: footer;
-    }
-    
-}  */
+    display: none; }
+  /*mediaq de proyectos.html*/
+  .mainProyectos {
+    display: flex;
+    display: grid;
+    grid-template-areas: "dos" "uno" "tres" "cuatro" "seis" "cinco";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr; }
+  .divUnoProyectos {
+    grid-area: uno;
+    align-items: center; }
+  .divDosProyectos {
+    align-items: center;
+    grid-area: dos;
+    margin-left: 4rem; }
+  .divCuatroProyectos {
+    grid-area: cuatro;
+    align-items: center;
+    width: 15rem;
+    padding-left: 25%;
+    height: 10rem; }
+  .divCuatroProyectos img {
+    width: 1rem;
+    height: 1rem; }
+  .divTresProyectos {
+    grid-area: tres;
+    align-items: center;
+    margin-left: 4rem; }
+  .divCincoProyectos {
+    align-items: center;
+    grid-area: cinco; }
+  .parrafoProyectos {
+    font-size: 0.4rem; }
+  .divSeisProyectos {
+    align-items: center;
+    grid-area: seis; } }
